@@ -32,9 +32,19 @@ section {
     height:30px;
 }
 .main_header {
-    font-family: Allura,Times New Roman,serif;
-    font-weight: 500;
-    font-size: clamp(50px, 8vw, 63px)
+  font-size: 50px;
+  font-family: Allura,Times New Roman,serif;
+  font-weight: 500;
+}
+@media screen and (min-width: 320px) {
+  .main_header {
+    font-size: calc(50px + 6 * ((100vw - 320px) / 680));
+  }
+}
+@media screen and (min-width: 1000px) {
+  .main_header {
+    font-size: 63px;
+  }
 }
 
 h2 {
